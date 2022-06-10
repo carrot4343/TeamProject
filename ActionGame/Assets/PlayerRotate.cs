@@ -11,7 +11,7 @@ public class PlayerRotate : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()//Rotate Character when press A, D
     {
         if (Input.GetKeyDown(KeyCode.A) && transform.rotation.y == 0)
         {

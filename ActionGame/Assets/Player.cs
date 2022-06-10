@@ -22,17 +22,17 @@ public class Player : MonoBehaviour
 	}
 	void Update()
 	{
-		//�ִϸ��̼� ��Ʈ��
+		//Animation Control
 		if (speed > 0)
 			anim.SetFloat("Speed", controller.velocity.magnitude);
 
-		//��Ʈ�ѷ��� �ٴڿ� ��������� �������� ������ �� ����
+		//Can control when controller is on ground
 		if (controller.isGrounded)
 		{
 
 			moveDirection = transform.forward * Input.GetAxis("Horizontal") * speed;
 			moveDirection.y = -gravity * Time.deltaTime;
-			//���� ����
+			//Control jump
 			if (Input.GetButtonDown("Jump"))
 			{
 				moveDirection.y = jumppower;
@@ -40,10 +40,10 @@ public class Player : MonoBehaviour
 		}
 		else
 		{
-			//�߷��� ���� ������. gravity ������ �����ϸ� �߷��� �� ũ�� �ϰų� �۰� �� �� ����.
+			//Set gravity
 			moveDirection.y -= gravity * Time.deltaTime;
 		}
-		//������ ����
+		//Control Movement
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 }
