@@ -50,11 +50,11 @@ public class MovementInput : MonoBehaviour {
         isGrounded = controller.isGrounded;
         if (isGrounded)
         {
-            verticalVel -= 0;
+
         }
         else
         {
-            verticalVel -= 1;
+
         }
         moveVector = new Vector3(0, verticalVel * .2f * Time.deltaTime, 0);
         controller.Move(moveVector);
