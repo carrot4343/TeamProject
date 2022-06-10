@@ -22,17 +22,17 @@ public class Player : MonoBehaviour
 	}
 	void Update()
 	{
-		//¾Ö´Ï¸ÞÀÌ¼Ç ÄÁÆ®·Ñ
+		//ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½
 		if (speed > 0)
 			anim.SetFloat("Speed", controller.velocity.magnitude);
 
-		//ÄÁÆ®·Ñ·¯°¡ ¹Ù´Ú¿¡ ´ê¾ÆÀÖÀ»¶§ ¿òÁ÷ÀÓÀ» Á¦¾îÇÒ ¼ö ÀÖÀ½
+		//ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½Ù´Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		if (controller.isGrounded)
 		{
 
 			moveDirection = transform.forward * Input.GetAxis("Horizontal") * speed;
 			moveDirection.y = -gravity * Time.deltaTime;
-			//Á¡ÇÁ Á¦¾î
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			if (Input.GetButtonDown("Jump"))
 			{
 				moveDirection.y = jumppower;
@@ -40,10 +40,10 @@ public class Player : MonoBehaviour
 		}
 		else
 		{
-			//Áß·ÂÀ» Á÷Á¢ ¼³Á¤ÇÔ. gravity º¯¼ö¸¦ Á¶Á¤ÇÏ¸é Áß·ÂÀ» ´õ Å©°Ô ÇÏ°Å³ª ÀÛ°Ô ÇÒ ¼ö ÀÖÀ½.
+			//ï¿½ß·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. gravity ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ß·ï¿½ï¿½ï¿½ ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½Ï°Å³ï¿½ ï¿½Û°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 			moveDirection.y -= gravity * Time.deltaTime;
 		}
-		//¿òÁ÷ÀÓ Á¦¾î
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 }
