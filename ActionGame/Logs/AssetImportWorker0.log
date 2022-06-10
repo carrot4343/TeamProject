@@ -686,3 +686,228 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1025.776472 seconds.
+  path: Assets/Scenes/Stage1.unity
+  artifactKey: Guid(4db77daa5fda99d40b8fa8c90a948613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage1.unity using Guid(4db77daa5fda99d40b8fa8c90a948613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4753b27671a37d03156c079ff7bdff2f') in 0.012547 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005763 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.835 seconds
+Domain Reload Profiling:
+	ReloadAssembly (836ms)
+		BeginReloadAssembly (114ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (640ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (210ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (286ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.47 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3740 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 37 unused Assets / (1.4 MB). Loaded Objects now: 4267.
+Memory consumption went from 165.4 MB to 164.0 MB.
+Total: 2.762600 ms (FindLiveObjects: 0.220700 ms CreateObjectMapping: 0.074100 ms MarkObjects: 2.137100 ms  DeleteObjects: 0.329900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 127.231432 seconds.
+  path: Assets/PlayerAnim.controller
+  artifactKey: Guid(e67002a80dfbc0a428056545e68cc329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAnim.controller using Guid(e67002a80dfbc0a428056545e68cc329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.011221 seconds  code(4) message(Build asset version error: assets/playeranim.controller in SourceAssetDB has modification time of '2022-06-10T11:59:48.2438754Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff610790c3d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff610797919 (Unity) StackWalker::ShowCallstack
+0x00007ff6117048b3 (Unity) GetStacktrace
+0x00007ff611a9ddd4 (Unity) GetAssetHashAndValidate
+0x00007ff611a99608 (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff611a975dd (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff611a1f488 (Unity) CreateAssetVersionBuilder
+0x00007ff611a25fe3 (Unity) ImportToObjects
+0x00007ff611a24d13 (Unity) ImportAsset
+0x00007ff611a476c2 (Unity) AssetImportWorker::Import
+0x00007ff611aac9f4 (Unity) <lambda_28a9dd63239995ea16631cf66756f7a6>::operator()
+0x00007ff611aedc72 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff611ada25e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff611adbf54 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff611aec2ee (Unity) IOService::Run
+0x00007ff611abf37f (Unity) AssetImportWorkerClient::Run
+0x00007ff611a89c03 (Unity) RunAssetImportWorkerClientV2
+0x00007ff611a89c8b (Unity) RunAssetImporterV2
+0x00007ff6112b38f4 (Unity) Application::InitializeProject
+0x00007ff61170eff8 (Unity) WinMain
+0x00007ff612a418ee (Unity) __scrt_common_main_seh
+0x00007ffa139a7034 (KERNEL32) BaseThreadInitThunk
+0x00007ffa15702651 (ntdll) RtlUserThreadStart
+)
+  ERROR: Build asset version error: assets/playeranim.controller in SourceAssetDB has modification time of '2022-06-10T11:59:48.2438754Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff610790c3d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff610797919 (Unity) StackWalker::ShowCallstack
+0x00007ff6117048b3 (Unity) GetStacktrace
+0x00007ff611a9ddd4 (Unity) GetAssetHashAndValidate
+0x00007ff611a99608 (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff611a975dd (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff611a1f488 (Unity) CreateAssetVersionBuilder
+0x00007ff611a25fe3 (Unity) ImportToObjects
+0x00007ff611a24d13 (Unity) ImportAsset
+0x00007ff611a476c2 (Unity) AssetImportWorker::Import
+0x00007ff611aac9f4 (Unity) <lambda_28a9dd63239995ea16631cf66756f7a6>::operator()
+0x00007ff611aedc72 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff611ada25e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff611adbf54 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff611aec2ee (Unity) IOService::Run
+0x00007ff611abf37f (Unity) AssetImportWorkerClient::Run
+0x00007ff611a89c03 (Unity) RunAssetImportWorkerClientV2
+0x00007ff611a89c8b (Unity) RunAssetImporterV2
+0x00007ff6112b38f4 (Unity) Application::InitializeProject
+0x00007ff61170eff8 (Unity) WinMain
+0x00007ff612a418ee (Unity) __scrt_common_main_seh
+0x00007ffa139a7034 (KERNEL32) BaseThreadInitThunk
+0x00007ffa15702651 (ntdll) RtlUserThreadStart
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.024416 seconds.
+  path: Assets/Player.cs
+  artifactKey: Guid(0873c8e15a35bcc4a9507cf2c5109cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.cs using Guid(0873c8e15a35bcc4a9507cf2c5109cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000300 seconds  code(4) message(Build asset version error: assets/player.cs in SourceAssetDB has modification time of '2022-06-10T11:59:48.2418734Z' while content on disk has modification time of '2022-06-10T12:00:25.1204577Z')
+  ERROR: Build asset version error: assets/player.cs in SourceAssetDB has modification time of '2022-06-10T11:59:48.2418734Z' while content on disk has modification time of '2022-06-10T12:00:25.1204577Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.632210 seconds.
+  path: Assets/PlayerRotate.cs
+  artifactKey: Guid(eb7368b614b24294199b3553bcf21bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerRotate.cs using Guid(eb7368b614b24294199b3553bcf21bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000336 seconds  code(4) message(Build asset version error: assets/playerrotate.cs in SourceAssetDB has modification time of '2022-06-10T11:59:48.244876Z' while content on disk has modification time of '2022-06-10T12:00:25.1204577Z')
+  ERROR: Build asset version error: assets/playerrotate.cs in SourceAssetDB has modification time of '2022-06-10T11:59:48.244876Z' while content on disk has modification time of '2022-06-10T12:00:25.1204577Z'
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005039 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.850 seconds
+Domain Reload Profiling:
+	ReloadAssembly (851ms)
+		BeginReloadAssembly (123ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (645ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (208ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (295ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (178ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.13 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3749 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 37 unused Assets / (1.4 MB). Loaded Objects now: 4279.
+Memory consumption went from 164.6 MB to 163.2 MB.
+Total: 3.366800 ms (FindLiveObjects: 0.243700 ms CreateObjectMapping: 0.151000 ms MarkObjects: 2.576700 ms  DeleteObjects: 0.394800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 43.691024 seconds.
+  path: Assets/3rdPerson+Fly
+  artifactKey: Guid(4c95cfdd8f630a14d9de417410e1eea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3rdPerson+Fly using Guid(4c95cfdd8f630a14d9de417410e1eea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a131aa840ae6a545350067e5daf211cf') in 0.011851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.321949 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(8090a424e41b1b84b80385dbfb5459fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(8090a424e41b1b84b80385dbfb5459fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e605b20326bca4f763eb0721fd3908a') in 0.006185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.052056 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(9062674cafa49044688a923b607f60e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(9062674cafa49044688a923b607f60e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb896c0b9bc66d810b21e35d784f412') in 0.006120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.119090 seconds.
+  path: Assets/Scripts/Platform_Behaviour.cs
+  artifactKey: Guid(4e8c64b12cb6cd347b350b8f5b5f5b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Platform_Behaviour.cs using Guid(4e8c64b12cb6cd347b350b8f5b5f5b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e369578924c980b55d37ef78b2278b9c') in 0.006388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.060376 seconds.
+  path: Assets/Scripts/Platform_Attach.cs
+  artifactKey: Guid(3412a778b5e9d144eabbff7429d043f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Platform_Attach.cs using Guid(3412a778b5e9d144eabbff7429d043f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92387bd4aea64bfd0afe36bfe40f8565') in 0.005827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 862.946577 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(bdf5301dd3247c2468b606f5585264c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(bdf5301dd3247c2468b606f5585264c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7127ef4c000b73735399c3f86cf36d04') in 0.005884 seconds 
