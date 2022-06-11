@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -20,10 +21,13 @@ public class Player : MonoBehaviour
 	}
 	void Update()
 	{
-		//Animation Control
+		playerMovement();
+
 		if (speed > 0)
 			anim.SetFloat("Speed", controller.velocity.magnitude);
-
+	}
+	void playerMovement()
+	{
 		//Can control when controller is on ground
 		if (controller.isGrounded)
 		{
@@ -45,4 +49,14 @@ public class Player : MonoBehaviour
 		//Control Movement
 		controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "DeathArea" || other.tag == "obstacle")
+        {
+			//SceneManager.LoadScene("Stage 2");
+			Debug.Log("dead");
+        }
+    }
 }
+
