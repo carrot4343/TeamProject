@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 	private Animator anim;
 	private CharacterController controller;
 
-	private Vector3 moveDirection = Vector3.zero;
+	public Vector3 moveDirection = Vector3.zero;
 
 	public float gravity = 25.0f;
 	public float speed = 7.0f;
