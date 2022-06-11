@@ -13,6 +13,12 @@ public class Player : MonoBehaviour
 	public float speed = 7.0f;
 	public float jumppower = 12.0f;
 
+
+	[SerializeField] private Transform player;
+	[SerializeField] private List<GameObject> checkPoints;
+	[SerializeField] private List<GameObject> deathZones;
+	[SerializeField] private Vector3 vectorPoint;
+
 	void Start()
 	{
 		controller = GetComponent<CharacterController>();
@@ -45,4 +51,20 @@ public class Player : MonoBehaviour
 		//Control Movement
 		controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.tag == "CheckPoint")
+		{
+			vectorPoint = player.transform.position;
+			Destroy(other.gameObject);
+		}
+
+		else if (other.gameObject.tag == "Deathzone")
+		{
+			player.transform.position = vectorPoint;
+		}
+
+	}
+
 }
