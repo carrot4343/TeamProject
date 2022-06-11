@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 	private Animator anim;
 	private CharacterController controller;
 
-	private Vector3 moveDirection = Vector3.zero;
+	public Vector3 moveDirection = Vector3.zero;
 
 	public float gravity = 25.0f;
 	public float speed = 7.0f;
@@ -57,6 +57,21 @@ public class Player : MonoBehaviour
 			//SceneManager.LoadScene("Stage 2");
 			Debug.Log("dead");
         }
-    }
+
+		if(other.tag == "JumpPad")
+        {
+			moveDirection.y = 15.0f;
+        }
+
+		if(other.tag == "DoorOpenSwitch")
+		{
+			GameObject.FindGameObjectWithTag("Door").SetActive(false);
+		}
+
+		if(other.tag == "DoorCloseSwitch")
+        {
+			GameObject.Find("Stage").transform.Find("BossDoor").gameObject.SetActive(true);
+		}
+	}
 }
 
