@@ -14,17 +14,35 @@ public class Player : MonoBehaviour
 	public float speed = 7.0f;
 	public float jumppower = 12.0f;
 
+	public GameObject shield;
+
 	void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
+		shield.SetActive(false);
 	}
 	void Update()
 	{
 		playerMovement();
 
 		if (speed > 0)
+        {
 			anim.SetFloat("Speed", controller.velocity.magnitude);
+		}
+
+		if(Input.GetKeyDown(KeyCode.E))
+        {
+			if (shield.activeSelf == true)
+			{
+				shield.SetActive(false);
+				shield.GetComponent<Shield>().guardTime = 0;
+			}
+			else if(shield.activeSelf == false)
+            {
+				shield.SetActive(true);
+            }
+		}
 	}
 	void playerMovement()
 	{
@@ -72,6 +90,11 @@ public class Player : MonoBehaviour
         {
 			GameObject.Find("Stage").transform.Find("BossDoor").gameObject.SetActive(true);
 		}
+
+		if(other.tag == "Bullet")
+        {
+			
+        }
 	}
 }
 
