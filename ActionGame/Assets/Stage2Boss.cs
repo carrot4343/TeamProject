@@ -25,6 +25,7 @@ public class Stage2Boss : MonoBehaviour
         if(other.tag == "Bullet")
         {
             bossHealthPoint -= 1;
+            Destroy(other.gameObject);
         }
     }
 }
