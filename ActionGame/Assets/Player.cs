@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -12,24 +13,40 @@ public class Player : MonoBehaviour
 	public float gravity = 25.0f;
 	public float speed = 7.0f;
 	public float jumppower = 12.0f;
+	public float playerHealthPoint = 10.0f;
 
-
-	[SerializeField] private Transform player;
-	[SerializeField] private List<GameObject> checkPoints;
-	[SerializeField] private List<GameObject> deathZones;
-	[SerializeField] private Vector3 vectorPoint;
+	public GameObject shield;
 
 	void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
+		shield.SetActive(false);
 	}
 	void Update()
 	{
-		//Animation Control
-		if (speed > 0)
-			anim.SetFloat("Speed", controller.velocity.magnitude);
+		playerMovement();
 
+		if (speed > 0)
+        {
+			anim.SetFloat("Speed", controller.velocity.magnitude);
+		}
+
+		if(Input.GetKeyDown(KeyCode.E))
+        {
+			if (shield.activeSelf == true)
+			{
+				shield.SetActive(false);
+				shield.GetComponent<Shield>().guardTime = 0;
+			}
+			else if(shield.activeSelf == false)
+            {
+				shield.SetActive(true);
+            }
+		}
+	}
+	void playerMovement()
+	{
 		//Can control when controller is on ground
 		if (controller.isGrounded)
 		{
@@ -52,19 +69,33 @@ public class Player : MonoBehaviour
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.tag == "CheckPoint")
+	void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "DeathArea" || other.tag == "obstacle")
+        {
+			//SceneManager.LoadScene("Stage 2");
+			Debug.Log("dead");
+        }
+
+		if(other.tag == "JumpPad")
+        {
+			moveDirection.y = 15.0f;
+        }
+
+		if(other.tag == "DoorOpenSwitch")
 		{
-			vectorPoint = player.transform.position;
-			Destroy(other.gameObject);
+			GameObject.FindGameObjectWithTag("Door").SetActive(false);
 		}
 
-		else if (other.gameObject.tag == "Deathzone")
-		{
-			player.transform.position = vectorPoint;
+		if(other.tag == "DoorCloseSwitch")
+        {
+			GameObject.Find("Stage").transform.Find("BossDoor").gameObject.SetActive(true);
 		}
 
+		if(other.tag == "Bullet")
+        {
+			playerHealthPoint -= 1.0f;	
+        }
 	}
-
 }
+
