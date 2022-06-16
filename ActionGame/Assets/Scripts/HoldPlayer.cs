@@ -8,7 +8,7 @@ public class HoldPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == Player)
+        if(other.gameObject.tag == "Lift")
         {
             Player.transform.parent = transform;
         }
@@ -16,7 +16,7 @@ public class HoldPlayer : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject == Player)
+        if(other.gameObject.tag == "Lift")
         {
             Player.transform.parent = null;
         }
