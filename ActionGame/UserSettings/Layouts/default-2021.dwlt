@@ -325,8 +325,11 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 53
 =======
+=======
+>>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
 <<<<<<< Updated upstream
   controlID: 19
 >>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
@@ -359,8 +362,11 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 44
 =======
+=======
+>>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
 <<<<<<< Updated upstream
   controlID: 20
 >>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
@@ -864,6 +870,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       m_ExpandedIDs: 0acdffff28d1ffff70e7ffff9ceaffffa8ecffffcceeffffacf0ffff94f4ffff84f7ffff9cf7ffff9af9ffff0cfbffffe8690000f28b0000
 =======
@@ -888,6 +895,9 @@ MonoBehaviour:
 =======
       m_ExpandedIDs: 0cfbffff
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
+=======
 >>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1190,13 +1200,19 @@ MonoBehaviour:
     m_Target: {x: -0.004162408, y: -0.05827733, z: -0.0005927581, w: 0.99764436}
     speed: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Value: {x: -0.0026676473, y: -0.058315832, z: -0.00050589343, w: 0.99829453}
 =======
+=======
+>>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
 <<<<<<< Updated upstream
     m_Value: {x: 0.033293575, y: 0.021121796, z: -0.0007429213, w: 0.9992221}
 =======
     m_Value: {x: -0.06526612, y: 0.7147013, z: -0.06646695, w: -0.69278127}
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
+=======
 >>>>>>> 58c8da0a890b017ba4bd4ae8b1a8c6b86472342b
   m_Size:
     m_Target: 517.687

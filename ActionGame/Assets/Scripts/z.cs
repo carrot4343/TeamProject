@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platform_Behaviour : MonoBehaviour
+public class z : MonoBehaviour
 {
     Vector3 pos; //현재위치
     public float delta = 2.0f; // 좌(우)로 이동가능한 (x)최대값
@@ -17,11 +17,7 @@ public class Platform_Behaviour : MonoBehaviour
     void Update()
     {
         Vector3 v = pos;
-<<<<<<< HEAD
         v.z += delta * Mathf.Sin(Time.time * speed);
-=======
-        v.x += delta * Mathf.Sin(Time.time * speed);
->>>>>>> 0293cbd7f0ba6494b8432e6a1da7ca43688b3bc8
         transform.position = v;
     }
 }
