@@ -5,7 +5,7 @@ using UnityEngine;
 public class UI_Paused : MonoBehaviour
 {
     // Start is called before the first frame update
-    GameObject resumeButton, mainMenuButton, pausedText;
+    public GameObject resumeButton, mainMenuButton, pausedText;
     void Start()
     {
         resumeButton.SetActive(false);
