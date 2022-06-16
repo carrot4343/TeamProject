@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 		anim = gameObject.GetComponentInChildren<Animator>();
 		shield.SetActive(false);
 	}
-	void Update()
+    void FixedUpdate()
 	{
 		playerMovement();
 
@@ -96,6 +96,19 @@ public class Player : MonoBehaviour
         {
 			playerHealthPoint -= 1.0f;	
         }
+
+		if(other.tag == "Platform")
+        {
+			controller.transform.parent = transform;
+		}
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.tag == "Platform")
+		{
+			controller.transform.parent = null;
+		}
 	}
 }
 
