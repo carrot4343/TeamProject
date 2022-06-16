@@ -15,7 +15,7 @@ C:/Users/carrot/Desktop/Study/2-2/UnityStudy/TeamProjectFinal/TeamProject/Action
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-8139
+11777
 Successfully changed project path to: C:/Users/carrot/Desktop/Study/2-2/UnityStudy/TeamProjectFinal/TeamProject/ActionGame
 C:/Users/carrot/Desktop/Study/2-2/UnityStudy/TeamProjectFinal/TeamProject/ActionGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/carrot/Desktop/Study/2-2/UnityStudy/TeamProjectFinal/TeamProject/Action
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 88.84 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 86.30 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56740
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56484
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004742 seconds.
+Registered in 0.004999 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 95.50 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 82.60 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.573 seconds
+- Completed reload, in  0.500 seconds
 Domain Reload Profiling:
-	ReloadAssembly (574ms)
-		BeginReloadAssembly (65ms)
+	ReloadAssembly (501ms)
+		BeginReloadAssembly (57ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (411ms)
-			LoadAssemblies (63ms)
+		EndReloadAssembly (357ms)
+			LoadAssemblies (55ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (95ms)
+			SetupTypeCache (80ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (248ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (217ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (96ms)
+				RefreshPlugins (83ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (105ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
+				ProcessInitializeOnLoadAttributes (91ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007475 seconds.
+Registered in 0.005384 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.92 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.950 seconds
+- Completed reload, in  0.849 seconds
 Domain Reload Profiling:
-	ReloadAssembly (951ms)
-		BeginReloadAssembly (100ms)
+	ReloadAssembly (850ms)
+		BeginReloadAssembly (94ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (749ms)
-			LoadAssemblies (80ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (656ms)
+			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (229ms)
+			SetupTypeCache (199ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (341ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (317ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (91ms)
-				ProcessInitializeOnLoadAttributes (216ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (193ms)
 				ProcessInitializeOnLoadMethodAttributes (22ms)
 				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3900 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 43 unused Assets / (1.4 MB). Loaded Objects now: 4361.
 Memory consumption went from 157.0 MB to 155.6 MB.
-Total: 4.064000 ms (FindLiveObjects: 0.293600 ms CreateObjectMapping: 0.228900 ms MarkObjects: 3.139300 ms  DeleteObjects: 0.401300 ms)
+Total: 3.279400 ms (FindLiveObjects: 0.304000 ms CreateObjectMapping: 0.087600 ms MarkObjects: 2.532000 ms  DeleteObjects: 0.354900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -158,50 +158,146 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 195729.127832 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Audio
+  artifactKey: Guid(b26ac8f2451cb46c69ad5bba0780ea35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Audio using Guid(b26ac8f2451cb46c69ad5bba0780ea35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '893af5573cc4f17c9b47f77fc0cf2e86') in 0.012290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.037367 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Audio/UI.asset
+  artifactKey: Guid(1c07be15e3624477d8f7d8b8e5895973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Audio/UI.asset using Guid(1c07be15e3624477d8f7d8b8e5895973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fcb756b3470443c1572f88b50353e89') in 0.028702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.118287 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements
+  artifactKey: Guid(4d5ac6769ee8b4039a6f56aae31f85cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements using Guid(4d5ac6769ee8b4039a6f56aae31f85cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59abb179b52bc3422d49c7a7fa24cda5') in 0.007178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.028025 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Animated Text.prefab
+  artifactKey: Guid(8e6ec20e79c62481baf292059c269bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Animated Text.prefab using Guid(8e6ec20e79c62481baf292059c269bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75d97944c2ab81805df6eb98e25ff5a1') in 0.044987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Bar.prefab
+  artifactKey: Guid(ec019941f90ec41e5ad2df28607525e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Bar.prefab using Guid(ec019941f90ec41e5ad2df28607525e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ebe366b7f7e947de2ea4c77887f6737') in 0.024110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Option List.prefab
+  artifactKey: Guid(849610b926fb64ccf9dbdfaa112dea32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Option List.prefab using Guid(849610b926fb64ccf9dbdfaa112dea32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bec37e71c9bb48473363e25b554bc7b') in 0.029365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Slider.prefab
+  artifactKey: Guid(cc47b5e80b09f4e7a91bb90909a1f535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Slider.prefab using Guid(cc47b5e80b09f4e7a91bb90909a1f535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38bc94c18e4404246cb252e906065790') in 0.017410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Group.prefab
+  artifactKey: Guid(16e628df1adfe430ebb078de05c75122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Group.prefab using Guid(16e628df1adfe430ebb078de05c75122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32f385d94c4b3531598b0decfa03f85d') in 0.020601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab.prefab
+  artifactKey: Guid(33e441ac813c7455ba8dd07d49958fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab.prefab using Guid(33e441ac813c7455ba8dd07d49958fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d33324b536501a81af42b8d0d8cdc4b') in 0.042260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Window.prefab
+  artifactKey: Guid(1544b70604b7949b685039eafaa3c761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Window.prefab using Guid(1544b70604b7949b685039eafaa3c761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c64b60d78294b4549336da98ee3561b') in 0.030293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Menu.prefab
+  artifactKey: Guid(5d556420a6baa4cadb7cac29e63fb404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Menu.prefab using Guid(5d556420a6baa4cadb7cac29e63fb404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f1df16816b468ae0f0ec311712426b') in 0.009297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button.prefab
+  artifactKey: Guid(ce875ceeaf5474c83a7ae0fce3b869b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button.prefab using Guid(ce875ceeaf5474c83a7ae0fce3b869b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '760e7fcc41b200b5184d8e435d5ac2b8') in 0.013185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Toggle Group.prefab
+  artifactKey: Guid(1e9a30bfdef7949729eaad6c9296ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Toggle Group.prefab using Guid(1e9a30bfdef7949729eaad6c9296ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '678367506f85d4e86747a4cb44566c58') in 0.018493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Dropdown.prefab
+  artifactKey: Guid(542b3538f7c95493b8f589fdc88a1db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Dropdown.prefab using Guid(542b3538f7c95493b8f589fdc88a1db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e5832f90b0c444059d7538669d6ad1f') in 0.023970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button With Background.prefab
+  artifactKey: Guid(47a7d99d823864bbd90ebe911d1dd081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button With Background.prefab using Guid(47a7d99d823864bbd90ebe911d1dd081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3353d9ffe4c524c75b6f60dc8d8769e4') in 0.009921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Input Field.prefab
+  artifactKey: Guid(b70a0d4e683c84847974b6ddea172fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Input Field.prefab using Guid(b70a0d4e683c84847974b6ddea172fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f78bd1c03adfdaa08740d3b99957efee') in 0.020477 seconds 
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005698 seconds.
+Registered in 0.005206 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\carrot\Desktop\Study\2-2\UnityStudy\TeamProjectFinal\TeamProject\ActionGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.865 seconds
+- Completed reload, in  0.910 seconds
 Domain Reload Profiling:
-	ReloadAssembly (866ms)
-		BeginReloadAssembly (126ms)
+	ReloadAssembly (910ms)
+		BeginReloadAssembly (140ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (649ms)
-			LoadAssemblies (78ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (674ms)
+			LoadAssemblies (89ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (224ms)
+			SetupTypeCache (237ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (276ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (282ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (165ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (167ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.35 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.55 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3849 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 37 unused Assets / (1.4 MB). Loaded Objects now: 4364.
-Memory consumption went from 152.2 MB to 150.9 MB.
-Total: 2.823700 ms (FindLiveObjects: 0.249500 ms CreateObjectMapping: 0.129200 ms MarkObjects: 2.197300 ms  DeleteObjects: 0.246800 ms)
+Unloading 38 unused Assets / (1.4 MB). Loaded Objects now: 4364.
+Memory consumption went from 152.7 MB to 151.3 MB.
+Total: 5.152800 ms (FindLiveObjects: 0.489700 ms CreateObjectMapping: 0.302100 ms MarkObjects: 3.863000 ms  DeleteObjects: 0.496700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -213,3 +309,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
