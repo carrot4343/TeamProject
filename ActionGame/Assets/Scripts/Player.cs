@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 	public float playerHealthPoint = 10.0f;
 
 	public GameObject shield;
+	public PlayerRotate playerRotate;
 
 	void Start()
 	{
