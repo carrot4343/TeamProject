@@ -150,10 +150,11 @@ public class Lift_Platform : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.gameObject.tag =="Player")
         {
+            Debug.Log("Hello!");
             playerCheck = true;
             if(!movingOn)
             {
@@ -165,7 +166,7 @@ public class Lift_Platform : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
             playerCheck = false;
 
