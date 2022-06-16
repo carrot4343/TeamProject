@@ -17,11 +17,8 @@ public class Platform_Behaviour : MonoBehaviour
     void Update()
     {
         Vector3 v = pos;
-<<<<<<< HEAD
         v.z += delta * Mathf.Sin(Time.time * speed);
-=======
         v.x += delta * Mathf.Sin(Time.time * speed);
->>>>>>> 0293cbd7f0ba6494b8432e6a1da7ca43688b3bc8
         transform.position = v;
     }
 }
