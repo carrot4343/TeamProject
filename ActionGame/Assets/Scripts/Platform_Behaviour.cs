@@ -19,6 +19,7 @@ public class Platform_Behaviour : MonoBehaviour
         Vector3 v = pos;
         v.z += delta * Mathf.Sin(Time.time * speed);
         v.x += delta * Mathf.Sin(Time.time * speed);
+        v.x += delta * Mathf.Sin(Time.time * speed);
         transform.position = v;
     }
 }
