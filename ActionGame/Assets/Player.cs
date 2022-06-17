@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 		anim = gameObject.GetComponentInChildren<Animator>();
 		shield.SetActive(false);
 	}
-    void FixedUpdate()
+    void Update()
 	{
 		playerMovement();
 
