@@ -22,7 +22,7 @@ public class Shield : MonoBehaviour
         if(other.tag == "Bullet" && guardTime <= parryingTime)
         {
             other.GetComponent<Transform>().rotation = Quaternion.Euler(90, 180, 0);
-            other.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,-600));
+            other.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,-750));
         }
         else if(other.tag == "Bullet" && guardTime > parryingTime)
         {

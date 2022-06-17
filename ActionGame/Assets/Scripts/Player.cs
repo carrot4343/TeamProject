@@ -26,23 +26,10 @@ public class Player : MonoBehaviour
     void Update()
 	{
 		playerMovement();
-
+		shieldManage();
 		if (speed > 0)
         {
 			anim.SetFloat("Speed", controller.velocity.magnitude);
-		}
-
-		if(Input.GetKeyDown(KeyCode.E))
-        {
-			if (shield.activeSelf == true)
-			{
-				shield.SetActive(false);
-				shield.GetComponent<Shield>().guardTime = 0;
-			}
-			else if(shield.activeSelf == false)
-            {
-				shield.SetActive(true);
-            }
 		}
 	}
 	void playerMovement()
@@ -67,6 +54,22 @@ public class Player : MonoBehaviour
 		}
 		//Control Movement
 		controller.Move(moveDirection * Time.deltaTime);
+	}
+
+	void shieldManage()
+    {
+		if (Input.GetKeyDown(KeyCode.E))
+		{
+			if (shield.activeSelf == true)
+			{
+				shield.SetActive(false);
+				shield.GetComponent<Shield>().guardTime = 0;
+			}
+			else if (shield.activeSelf == false)
+			{
+				shield.SetActive(true);
+			}
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -97,17 +100,17 @@ public class Player : MonoBehaviour
 			playerHealthPoint -= 1.0f;	
         }
 
-		if(other.tag == "Platform")
+		if(other.tag == "moveLR" || other.tag == "moveUD")
         {
-			controller.transform.parent = transform;
+			gameObject.transform.SetParent(other.gameObject.transform);
 		}
 	}
 
-	private void OnTriggerExit(Collider other)
+	void OnTriggerExit(Collider other)
 	{
-		if (other.gameObject.tag == "Platform")
+		if (other.tag == "moveLR"|| other.tag == "moveUD")
 		{
-			controller.transform.parent = null;
+			gameObject.transform.SetParent(null);
 		}
 	}
 }
