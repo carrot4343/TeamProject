@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
 			playerHealthPoint -= 1.0f;	
         }
 
-		if(other.tag == "moveLR")
+		if(other.tag == "moveLR" || other.tag == "moveUD")
         {
 			gameObject.transform.SetParent(other.gameObject.transform);
 		}
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
 
 	void OnTriggerExit(Collider other)
 	{
-		if (other.tag == "moveLR")
+		if (other.tag == "moveLR"|| other.tag == "moveUD")
 		{
 			gameObject.transform.SetParent(null);
 		}
