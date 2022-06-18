@@ -5,8 +5,8 @@ using UnityEngine;
 public class TextPopUP : MonoBehaviour
 {
 
-    public GameObject myText;
     public bool isVisible;
+    GameObject myText;
 
     
     // Start is called before the first frame update
@@ -25,14 +25,12 @@ public class TextPopUP : MonoBehaviour
     {
         if(isVisible)
         {
-            myText.SetActive(false);
+            myText.SetActive(true);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
-            isVisible = true;
-
+        isVisible = true;
     }
 }
