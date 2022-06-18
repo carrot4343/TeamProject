@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 	public float gravity = 25.0f;
 	public float speed = 7.0f;
 	public float jumppower = 12.0f;
-	public float playerHealthPoint = 10.0f;
+	public int playerHealthPoint = 5;
 
 	public GameObject shield;
 
@@ -29,13 +29,11 @@ public class Player : MonoBehaviour
 
     void Start()
 	{
+		player = gameObject.transform;
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
 		shield.SetActive(false);
-
-		ls2 = GameObject.Find("StageChanger").GetComponent<LoadScene2>();
-		tpu = GameObject.Find("TextPopUP").GetComponent<TextPopUP>();
-
+		vectorPoint = gameObject.transform.position;
 	}
 	void Update()
 	{
@@ -44,6 +42,13 @@ public class Player : MonoBehaviour
         if (speed > 0)
 		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
+		}
+
+		if(playerHealthPoint <= 0)
+        {
+			player.transform.position = vectorPoint;
+			playerHealthPoint = 5;
+			GameObject.Find("Boss").GetComponent<Stage2Boss>().bossHealthPoint = 10;
 		}
 	}
 	void playerMovement()
@@ -100,15 +105,14 @@ public class Player : MonoBehaviour
 			player.transform.position = vectorPoint;
 		}
 
-		if (other.tag == "DeathArea" || other.tag == "obstacle")
-		{
-			//SceneManager.LoadScene("Stage 2");
-			Debug.Log("dead");
-		}
+		if(other.tag == "obstacle")
+        {
+			playerHealthPoint -= 2;
+        }
 
 		if (other.tag == "JumpPad")
 		{
-			moveDirection.y = 15.0f;
+			moveDirection.y = jumppower * 0.9f;
 		}
 
 		if (other.tag == "DoorOpenSwitch")
@@ -123,7 +127,7 @@ public class Player : MonoBehaviour
 
 		if (other.tag == "Bullet")
 		{
-			playerHealthPoint -= 1.0f;
+			playerHealthPoint -= 1;
 		}
 
 		if (other.tag == "Platform")
@@ -135,17 +139,6 @@ public class Player : MonoBehaviour
 		{
 			moveDirection.x = 10.0f;
 		}
-		
-		if (other.tag == "StageChanger")
-		{
-			//ls2.checkPlayer = true;
-		}
-
-		if (other.tag == "TextPopUP")
-		{
-			//tpu.isVisible  = true;
-		}
-
 
     }
     void OnTriggerExit(Collider other)

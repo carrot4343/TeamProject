@@ -11,7 +11,7 @@ public class Stage2Boss : MonoBehaviour
     void Start()
     {
         hpSlider = GameObject.Find("Canvas/BossHP");
-        bossHealthPoint = 20;
+        bossHealthPoint = 10;
     }
 
     // Update is called once per frame
