@@ -20,7 +20,7 @@ public class Stage2Boss : MonoBehaviour
         hpSlider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 2f, 0));
         if(bossHealthPoint == 0)
         {
-            //SceneManager.LoadScene("Stage 3");
+            SceneManager.LoadScene("win");
         }
     }
 
