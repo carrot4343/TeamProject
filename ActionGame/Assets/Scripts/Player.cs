@@ -24,17 +24,24 @@ public class Player : MonoBehaviour
 
 	public GameObject shield;
 
-	void Start()
+	LoadScene2 ls2;
+	TextPopUP tpu;
+
+    void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
 		shield.SetActive(false);
+
+		ls2 = GameObject.Find("StageChanger").GetComponent<LoadScene2>();
+		tpu = GameObject.Find("TextPopUP").GetComponent<TextPopUP>();
+
 	}
 	void Update()
 	{
 		playerMovement();
 		shieldManage();
-		if (speed > 0)
+        if (speed > 0)
 		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
 		}
@@ -128,14 +135,26 @@ public class Player : MonoBehaviour
 		{
 			moveDirection.x = 10.0f;
 		}
-	}
+		
+		if (other.tag == "StageChanger")
+		{
+			//ls2.checkPlayer = true;
+		}
 
-	void OnTriggerExit(Collider other)
+		if (other.tag == "TextPopUP")
+		{
+			//tpu.isVisible  = true;
+		}
+
+
+    }
+    void OnTriggerExit(Collider other)
 	{
 		if (other.tag == "Platform")
 		{
 			gameObject.transform.SetParent(null);
 		}
+		
 	}
 }
 
