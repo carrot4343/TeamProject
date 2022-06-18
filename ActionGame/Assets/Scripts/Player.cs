@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	[SerializeField] private Transform player;
+	[SerializeField] private List<GameObject> checkPoints;
+	[SerializeField] private List<GameObject> deathZones;
+	[SerializeField] private Vector3 vectorPoint;
+	[SerializeField] private float dead;
+
+
 	private Animator anim;
 	private CharacterController controller;
 
@@ -23,12 +30,12 @@ public class Player : MonoBehaviour
 		anim = gameObject.GetComponentInChildren<Animator>();
 		shield.SetActive(false);
 	}
-    void Update()
+	void Update()
 	{
 		playerMovement();
 		shieldManage();
 		if (speed > 0)
-        {
+		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
 		}
 	}
@@ -57,7 +64,7 @@ public class Player : MonoBehaviour
 	}
 
 	void shieldManage()
-    {
+	{
 		if (Input.GetKeyDown(KeyCode.E))
 		{
 			if (shield.activeSelf == true)
@@ -73,42 +80,59 @@ public class Player : MonoBehaviour
 	}
 
 	void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "DeathArea" || other.tag == "obstacle")
-        {
+	{
+
+		if (other.gameObject.tag == "CheckPoint")
+		{
+			vectorPoint = player.transform.position;
+			Destroy(other.gameObject);
+		}
+
+		else if (other.gameObject.tag == "Deathzone")
+		{
+			player.transform.position = vectorPoint;
+		}
+
+		if (other.tag == "DeathArea" || other.tag == "obstacle")
+		{
 			//SceneManager.LoadScene("Stage 2");
 			Debug.Log("dead");
-        }
+		}
 
-		if(other.tag == "JumpPad")
-        {
+		if (other.tag == "JumpPad")
+		{
 			moveDirection.y = 15.0f;
-        }
+		}
 
-		if(other.tag == "DoorOpenSwitch")
+		if (other.tag == "DoorOpenSwitch")
 		{
 			GameObject.FindGameObjectWithTag("Door").SetActive(false);
 		}
 
-		if(other.tag == "DoorCloseSwitch")
-        {
+		if (other.tag == "DoorCloseSwitch")
+		{
 			GameObject.Find("Stage").transform.Find("BossDoor").gameObject.SetActive(true);
 		}
 
-		if(other.tag == "Bullet")
-        {
-			playerHealthPoint -= 1.0f;	
-        }
+		if (other.tag == "Bullet")
+		{
+			playerHealthPoint -= 1.0f;
+		}
 
-		if(other.tag == "moveLR" || other.tag == "moveUD")
-        {
+		if (other.tag == "Platform")
+		{
 			gameObject.transform.SetParent(other.gameObject.transform);
+		}
+
+		if (other.tag == "Pusher")
+		{
+			moveDirection.x = 10.0f;
 		}
 	}
 
 	void OnTriggerExit(Collider other)
 	{
-		if (other.tag == "moveLR"|| other.tag == "moveUD")
+		if (other.tag == "Platform")
 		{
 			gameObject.transform.SetParent(null);
 		}
