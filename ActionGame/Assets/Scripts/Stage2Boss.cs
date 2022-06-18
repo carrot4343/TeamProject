@@ -18,6 +18,7 @@ public class Stage2Boss : MonoBehaviour
     void Update()
     {
         hpSlider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 2f, 0));
+        hpSlider.GetComponent<Slider>().value = bossHealthPoint;
         if(bossHealthPoint == 0)
         {
             //SceneManager.LoadScene("Stage 3");
@@ -27,7 +28,7 @@ public class Stage2Boss : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Bullet")
-        {
+        { 
             bossHealthPoint -= 1;
             Destroy(other.gameObject);
         }

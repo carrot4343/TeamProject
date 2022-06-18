@@ -10,7 +10,6 @@ public class MoveLR : MonoBehaviour
 	void Start()
 	{
 		rangeMotion = 6.0f;
-		speed = 3.5f;
 		moveDirection = 1;
 		leftMaxMovePosiion = gameObject.transform.position - new Vector3(0, 0, rangeMotion);
 		rightMaxMovePosition = gameObject.transform.position + new Vector3(0, 0, rangeMotion);
