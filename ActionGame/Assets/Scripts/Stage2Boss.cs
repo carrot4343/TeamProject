@@ -21,7 +21,7 @@ public class Stage2Boss : MonoBehaviour
         hpSlider.GetComponent<Slider>().value = bossHealthPoint;
         if(bossHealthPoint == 0)
         {
-            //SceneManager.LoadScene("Stage 3");
+            SceneManager.LoadScene("win");
         }
     }
 
