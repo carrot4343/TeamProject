@@ -15,12 +15,17 @@ public class Player : MonoBehaviour
 	private Animator anim;
 	private CharacterController controller;
 	private GameObject hpSlider;
+	public HealthManager healthmanager;
 
 	public Vector3 moveDirection = Vector3.zero;
 
 	public float gravity = 25.0f;
 	public float speed = 7.0f;
 	public float jumppower = 12.0f;
+	
+	public float knockBackForce;
+	public float knockBackTime;
+	private float knockBackCounter;
 
 	public GameObject shield;
 
@@ -32,6 +37,7 @@ public class Player : MonoBehaviour
 		player = this.transform;
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
+		healthmanager = FindObjectOfType<HealthManager>();
 		shield.SetActive(false);
 		vectorPoint = gameObject.transform.position;
 		hpSlider = GameObject.Find("Canvas/PlayerHP");
@@ -46,6 +52,20 @@ public class Player : MonoBehaviour
 		hpSlider.GetComponent<Slider>().value = playerHealthPoint;
 
 		if (speed > 0)
+
+		if (knockBackCounter <=0)
+        {
+			
+			shieldManage();
+		}
+        else
+        {
+			knockBackCounter -= Time.deltaTime;
+        }
+
+
+
+        if (speed > 0)
 		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
 		}
@@ -56,6 +76,10 @@ public class Player : MonoBehaviour
 			playerHealthPoint = 5;
 			GameObject.Find("Boss").GetComponent<Stage2Boss>().bossHealthPoint = 10;
 		}
+		if (healthmanager.currentHealth == 0)
+        {
+			SceneManager.LoadScene("Win");
+        }
 	}
 
 	void playerMovement()
@@ -81,6 +105,15 @@ public class Player : MonoBehaviour
 		//Control Movement
 		controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	public void KnockBack(Vector3 direction)
+    {
+		knockBackCounter = knockBackTime;
+
+		moveDirection = direction * knockBackForce;
+		//moveDirection.y = knockBackForce;
+
+    }
 
 	void shieldManage()
 	{
@@ -133,7 +166,7 @@ public class Player : MonoBehaviour
 
 		if (other.tag == "Bullet")
 		{
-			playerHealthPoint -= 1.0f;
+			healthmanager.currentHealth -= 1;
 		}
 
 		if (other.tag == "Platform")
@@ -145,7 +178,6 @@ public class Player : MonoBehaviour
 		{
 			moveDirection.x = 10.0f;
 		}
-		
 		
 
 
