@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
 	public float gravity = 25.0f;
 	public float speed = 7.0f;
 	public float jumppower = 12.0f;
-	public float playerHealthPoint = 10.0f;
 
 	public GameObject shield;
 
