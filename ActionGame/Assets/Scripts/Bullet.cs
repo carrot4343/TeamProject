@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int bulletDamage = 1;
     void Start()
     {
         gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 350));
         Destroy(gameObject, 4.0f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("damaged");
+            Destroy(this.gameObject);
+            GameObject.Find("Player").GetComponent<HealthManager>().HurtPlayer(bulletDamage, Vector3.zero);
+        }
     }
 }
