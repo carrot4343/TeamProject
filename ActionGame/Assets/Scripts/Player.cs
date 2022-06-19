@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,9 +12,9 @@ public class Player : MonoBehaviour
 	[SerializeField] private Vector3 vectorPoint;
 	[SerializeField] private float dead;
 
-
 	private Animator anim;
 	private CharacterController controller;
+	private GameObject hpSlider;
 
 	public Vector3 moveDirection = Vector3.zero;
 
@@ -31,11 +32,17 @@ public class Player : MonoBehaviour
 		anim = gameObject.GetComponentInChildren<Animator>();
 		shield.SetActive(false);
 		vectorPoint = gameObject.transform.position;
+		hpSlider = GameObject.Find("Canvas/PlayerHP");
 	}
+
 	void Update()
 	{
 		playerMovement();
 		shieldManage();
+
+		hpSlider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1.8f, 0));
+		hpSlider.GetComponent<Slider>().value = playerHealthPoint;
+
 		if (speed > 0)
 		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
@@ -48,6 +55,7 @@ public class Player : MonoBehaviour
 			GameObject.Find("Boss").GetComponent<Stage2Boss>().bossHealthPoint = 10;
 		}
 	}
+
 	void playerMovement()
 	{
 		//Can control when controller is on ground
@@ -90,7 +98,6 @@ public class Player : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-
 		if (other.gameObject.tag == "CheckPoint")
 		{
 			vectorPoint = player.transform.position;
