@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
 
     void Start()
 	{
+		player = this.transform;
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
 		shield.SetActive(false);
@@ -48,6 +49,13 @@ public class Player : MonoBehaviour
 		if (speed > 0)
 		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
+		}
+
+		if(playerHealthPoint <= 0)
+        {
+			player.transform.position = vectorPoint;
+			playerHealthPoint = 5;
+			GameObject.Find("Boss").GetComponent<Stage2Boss>().bossHealthPoint = 10;
 		}
 	}
 
@@ -104,10 +112,9 @@ public class Player : MonoBehaviour
 			player.transform.position = vectorPoint;
 		}
 
-		if (other.tag == "DeathArea" || other.tag == "obstacle")
+		if (other.tag == "obstacle")
 		{
-			//SceneManager.LoadScene("Stage 2");
-			Debug.Log("dead");
+			playerHealthPoint -= 2;
 		}
 
 		if (other.tag == "JumpPad")
