@@ -41,11 +41,11 @@ public class Player : MonoBehaviour
 	}
 	void Update()
 	{
-		playerMovement();
+		
 
 		if (knockBackCounter <=0)
         {
-			
+			playerMovement();
 			shieldManage();
 		}
         else
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 
 		if (healthmanager.currentHealth == 0)
         {
-			SceneManager.LoadScene("Win");
+			SceneManager.LoadScene("GameOver");
         }
 	}
 	void playerMovement()
@@ -92,9 +92,9 @@ public class Player : MonoBehaviour
 	public void KnockBack(Vector3 direction)
     {
 		knockBackCounter = knockBackTime;
-
+		
 		moveDirection = direction * knockBackForce;
-		//moveDirection.y = knockBackForce;
+		moveDirection.y = knockBackForce;
 
     }
 
@@ -126,6 +126,7 @@ public class Player : MonoBehaviour
 		else if (other.gameObject.tag == "Deathzone")
 		{
 			player.transform.position = vectorPoint;
+			healthmanager.currentHealth -= 1;
 		}
 
 		if (other.tag == "DeathArea" || other.tag == "obstacle")
