@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 
 		if (healthmanager.currentHealth == 0)
         {
-			SceneManager.LoadScene("Win");
+			SceneManager.LoadScene("GameOver");
         }
 	}
 	void playerMovement()
