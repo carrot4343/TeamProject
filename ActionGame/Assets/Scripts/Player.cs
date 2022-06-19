@@ -14,13 +14,17 @@ public class Player : MonoBehaviour
 
 	private Animator anim;
 	private CharacterController controller;
+	public HealthManager healthmanager;
 
 	public Vector3 moveDirection = Vector3.zero;
 
 	public float gravity = 25.0f;
 	public float speed = 7.0f;
 	public float jumppower = 12.0f;
-	public float playerHealthPoint = 10.0f;
+	
+	public float knockBackForce;
+	public float knockBackTime;
+	private float knockBackCounter;
 
 	public GameObject shield;
 
@@ -31,17 +35,33 @@ public class Player : MonoBehaviour
 	{
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
+		healthmanager = FindObjectOfType<HealthManager>();
 		shield.SetActive(false);
 
 	}
 	void Update()
 	{
-		playerMovement();
-		shieldManage();
+		if (knockBackCounter <=0)
+        {
+			playerMovement();
+			shieldManage();
+		}
+        else
+        {
+			knockBackCounter -= Time.deltaTime;
+        }
+
+
+
         if (speed > 0)
 		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
 		}
+
+		if (healthmanager.currentHealth == 0)
+        {
+			SceneManager.LoadScene("Win");
+        }
 	}
 	void playerMovement()
 	{
@@ -66,6 +86,15 @@ public class Player : MonoBehaviour
 		//Control Movement
 		controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	public void KnockBack(Vector3 direction)
+    {
+		knockBackCounter = knockBackTime;
+
+		moveDirection = direction * knockBackForce;
+		moveDirection.y = knockBackForce;
+
+    }
 
 	void shieldManage()
 	{
@@ -120,7 +149,7 @@ public class Player : MonoBehaviour
 
 		if (other.tag == "Bullet")
 		{
-			playerHealthPoint -= 1.0f;
+			healthmanager.currentHealth -= 1;
 		}
 
 		if (other.tag == "Platform")
@@ -133,7 +162,10 @@ public class Player : MonoBehaviour
 			moveDirection.x = 10.0f;
 		}
 		
-		
+		//if (other.tag == "HazardStep")
+        //{
+		//	healthmanager.currentHealth -= 1;
+		//}
 
 
     }
