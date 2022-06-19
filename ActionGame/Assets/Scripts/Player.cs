@@ -41,9 +41,11 @@ public class Player : MonoBehaviour
 	}
 	void Update()
 	{
+		playerMovement();
+
 		if (knockBackCounter <=0)
         {
-			playerMovement();
+			
 			shieldManage();
 		}
         else
@@ -92,7 +94,7 @@ public class Player : MonoBehaviour
 		knockBackCounter = knockBackTime;
 
 		moveDirection = direction * knockBackForce;
-		moveDirection.y = knockBackForce;
+		//moveDirection.y = knockBackForce;
 
     }
 
@@ -162,10 +164,6 @@ public class Player : MonoBehaviour
 			moveDirection.x = 10.0f;
 		}
 		
-		//if (other.tag == "HazardStep")
-        //{
-		//	healthmanager.currentHealth -= 1;
-		//}
 
 
     }
