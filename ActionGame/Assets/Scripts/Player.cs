@@ -29,9 +29,6 @@ public class Player : MonoBehaviour
 
 	public GameObject shield;
 
-	
-	TextPopUP tpu;
-
     void Start()
 	{
 		player = this.transform;
@@ -45,18 +42,13 @@ public class Player : MonoBehaviour
 
 	void Update()
 	{
-		playerMovement();
-		shieldManage();
-
 		hpSlider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1.8f, 0));
-		hpSlider.GetComponent<Slider>().value = playerHealthPoint;
-
-		if (speed > 0)
+		hpSlider.GetComponent<Slider>().value = healthmanager.currentHealth;
 
 		if (knockBackCounter <=0)
         {
-			
 			shieldManage();
+			playerMovement();
 		}
         else
         {
@@ -64,22 +56,17 @@ public class Player : MonoBehaviour
         }
 
 
-
         if (speed > 0)
 		{
 			anim.SetFloat("Speed", controller.velocity.magnitude);
 		}
 
-		if(playerHealthPoint <= 0)
+		if(healthmanager.currentHealth <= 0)
         {
 			player.transform.position = vectorPoint;
-			playerHealthPoint = 5;
+			healthmanager.currentHealth = 10;
 			GameObject.Find("Boss").GetComponent<Stage2Boss>().bossHealthPoint = 10;
 		}
-		if (healthmanager.currentHealth == 0)
-        {
-			SceneManager.LoadScene("Win");
-        }
 	}
 
 	void playerMovement()
@@ -144,11 +131,6 @@ public class Player : MonoBehaviour
 			player.transform.position = vectorPoint;
 		}
 
-		if (other.tag == "obstacle")
-		{
-			playerHealthPoint -= 2;
-		}
-
 		if (other.tag == "JumpPad")
 		{
 			moveDirection.y = 15.0f;
@@ -164,11 +146,6 @@ public class Player : MonoBehaviour
 			GameObject.Find("Stage").transform.Find("BossDoor").gameObject.SetActive(true);
 		}
 
-		if (other.tag == "Bullet")
-		{
-			healthmanager.currentHealth -= 1;
-		}
-
 		if (other.tag == "Platform")
 		{
 			gameObject.transform.SetParent(other.gameObject.transform);
@@ -178,9 +155,6 @@ public class Player : MonoBehaviour
 		{
 			moveDirection.x = 10.0f;
 		}
-		
-
-
     }
     void OnTriggerExit(Collider other)
 	{
