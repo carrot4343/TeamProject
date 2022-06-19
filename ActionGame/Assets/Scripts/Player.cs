@@ -63,10 +63,13 @@ public class Player : MonoBehaviour
 
 		if(healthmanager.currentHealth <= 0)
         {
+			if (SceneManager.GetActiveScene().name == "Stage 1")
+			{
+				SceneManager.LoadScene("GameOver");
+			}
 			player.transform.position = vectorPoint;
 			healthmanager.currentHealth = 10;
 			GameObject.Find("Boss").GetComponent<Stage2Boss>().bossHealthPoint = 10;
-			SceneManager.LoadScene("GameOver");
         }
 	}
 
